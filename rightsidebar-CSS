@@ -1,0 +1,112 @@
+.right-sidebar{
+    position:absolute;
+    right:-5px;
+    top:-350px;
+    width:450px;
+    bottom:0;
+    background-color:black;
+    display:flex;
+    flex-direction:column;
+}
+.fixed{
+    position:fixed;
+}
+.getverified{
+    background-color:rgb(19, 19, 19);
+    margin-top:70px;
+    padding-left:30px;
+    width:300px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left:30px;
+    border-radius:20px;
+}
+.searchtweet{
+    width:320px;
+    background-color:rgb(19, 19, 19);
+    margin-top:6px;
+    height:40px;
+    border-radius:40px;
+    border-style:none;
+    padding-left:10px;
+    margin-left:30px;
+    color:white;
+}
+.searchtweet::placeholder{
+    font-size:17px;
+}
+.text-getverified{
+    font:solid;
+    font-size:20px;
+    font-weight:600;
+    font-family:chirp;
+}
+.button-getverified{
+    background-color:rgb(29, 155, 240);
+    padding:10px;
+    width:130px;
+    border-radius:25px;
+    border:none;
+    color:white;
+    margin-top:10px;
+    font-size:17px;
+    font-weight:600;
+    transition:background-color,0.1s;
+}
+.button-getverified:hover{
+    cursor:pointer;
+    background-color:rgb(21, 132, 207)
+}
+.text2-getverified{
+    font-weight:600;
+    font-size:15px;
+    margin-top:10px;
+}
+.hashtags{
+    display:flex;
+    flex-direction:column;
+    margin-left:30px;
+    margin-top:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius:20px;
+    background-color:rgb(19, 19, 19);
+    width:335px;
+}
+.hashheading{
+    margin-bottom:20px;
+    font-weight:600;
+    font-size:20px;
+    font-family:chirp;
+    padding-left:30px;
+}
+.hash1, .hash3{
+    color:rgb(93, 92, 92);
+    padding:5px;
+    font-family:chirp;
+}
+.hash2{
+    font-family:chirp;
+    font-weight:600;
+}
+.france:hover{
+    background-color:rgb(28, 27, 27);
+    
+}
+.france{
+    padding-left:30px;
+}
+.show{
+    height:40px;
+    padding-left:30px;
+    padding-top:20px;
+    margin-bottom:0;
+}
+.showmore{
+    color:rgb(21, 132, 207);
+}
+.show:hover{
+    background-color:rgb(28, 27, 27);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+}

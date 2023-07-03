@@ -1,0 +1,170 @@
+
+.central-bar{
+    margin:0;
+    padding:0;
+    position:fixed;
+    top:0;
+    left:400px;
+    height:100px;
+    right:450px;
+    background-color:rgb(0, 0, 0);
+    opacity:0.9;
+    /*-webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);*/
+    backdrop-filter: blur(8px);
+    display:flex;
+    flex-direction:column;
+    border-bottom-width:1px;
+    border-bottom-color:rgb(156, 145, 145) ;
+    border-bottom-style:solid;
+    z-index:100;
+}
+.filter{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:bottom;
+    height:50px;
+}
+.home{
+    font-size:21px;
+    font-weight:bold;
+    color:white;
+    padding-left:10px;
+    padding-top:6px;
+    padding-bottom:10px;
+}
+.foryou{
+width:50%;
+background-color:black;
+color:white;
+font-weight:bold;
+font-size:16px;
+margin:0;
+border:none;
+}
+.follow{
+    width:50%;
+    background-color:black;
+color:white;
+font-weight:bold;
+font-size:16px;
+margin:0;
+border:none;
+}
+.foryou:hover{
+    background-color:rgb(40, 38, 38);
+}
+.follow:hover{
+    background-color:rgb(40, 38, 38);
+}
+.account{
+    display:flex;
+    flex-direction:row;
+    padding-bottom:20px;
+}
+.propic{
+    object-fit:cover;
+    object-position:center;
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    margin-top:5px;
+    margin-left:10px;
+}
+.profile-picture{
+    padding-right:10px;
+    vertical-align:middle;
+}
+.whats{
+    vertical-align:middle;
+    background-color:black;
+    border:none;
+    width:200px;
+    padding-top:20px;
+    padding-bottom:30px;
+}
+.whats::placeholder{
+    color:rgb(100, 101, 101);
+    font-size:21px;
+    font-family:chirp;
+}
+
+.mood{
+    width:100%;
+}
+.proicons{
+    display:flex;
+    flex-direction:row;
+}
+.leftproicons{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.media{
+    width:25px;
+    height:25px;
+    padding:10px;
+}
+.gif,.poll,.emoji,.schedule,.gps{
+    width:23px;
+    height:23px;
+    padding:10px;
+}
+.tweet{
+    display:flex;
+    justify-content:end;
+    width:325px;
+}
+.tweet-button{
+    border-radius:25px;
+    width:100px;
+    font-size:15px;
+    font-weight:bold;
+    color:white;
+    background-color:rgb(26, 78, 112);
+    border:none;
+}
+.visibility{
+    background-color:black;
+    width:90px;
+    border-radius:25px;
+    border-style:solid;
+    border-width:1px;
+}
+.visibility::placeholder{
+    padding-left:5px;
+color:rgb(29, 155, 240);
+font:20px;
+font-weight:bold;
+}
+.commentvisi{
+    display:flex;
+    flex-direction:row;
+    padding-bottom:15px;
+    
+}
+.visitext{
+    color:rgb(29, 155, 240);
+    font-weight:bold;
+    padding-top:1px;
+}
+.globe{
+    width:23px;
+    height:23px;
+}
+.tweetcount{
+    display:flex;
+    justify-content:center;
+    width:560px;
+    padding:15px;
+    border-style:solid;
+    border-width:1px;
+}
+.tweetstat{
+    color:rgb(29, 155, 240);
+    font-size:17px;
+}

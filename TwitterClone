@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twitter Clone</title>
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="twitter.css">
+        <link href="https://fonts.cdnfonts.com/css/chirp-2" rel="stylesheet">  
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="rightsidebar.css">
+        <link rel="stylesheet" href="leftsidebar.css">
+    </head>
+    <body>
+        
+        <header class="left-sidebar">
+            <div class="lefticons">
+                <img src="iconizer-logo.svg" class="twitterlogo">
+                <div class="subicons">
+                    <img src="iconizer-home.svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Home</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-mag (3) (1).svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Explore</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-noti.svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Notifications</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-message.svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Messages</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-list (1).svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Lists</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-bookmark (1).svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Bookmarks</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-verified (1) (1).svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Verified</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-profile (1).svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">Profile</p>
+                    </div>
+                </div>
+                <div class="subicons">
+                    <img src="iconizer-more (1).svg" class="left-home">
+                    <div class="absoluteicons">
+                        <p class="p-home">More</p>
+                    </div>
+                </div>
+                <div class="leftbartweet">
+                    <button class="left-tweet">Tweet</button>
+                </div>
+                <div class="login">
+                    <div class="loginpic">
+                        <img src="prifilepic.jpg" class="propic">
+                    </div>
+                    <div class="logindetails">
+                        <p class="loginname">Anonymous<br><span class="loginuser">@anonymous07</span></p>
+                    </div>
+                </div>
+        </header>
+        <header class="central-bar">
+            <div class="home">
+                <p class="home">Home</p>
+            </div>
+            <div class="filter">
+                <button class="foryou">For you</button>
+                <button class="follow">Following</button>
+            </div>
+        </header>
+        <header class="account">
+            <div class="profile-picture">
+                <img src="prifilepic.jpg" class="propic">
+            </div>
+            <div class="mood">
+                <input class="visibility" type="text" placeholder="Everyone &#x25BC">
+                <div>
+                <input class="whats" type="text" placeholder="What is happening?!">
+                <div class="commentvisi">
+                    <img src="iconizer-globe.svg" class="globe">
+                    <p class="visitext">Everyone can reply</p>
+                </div>
+                <div class="proicons">
+                    <div class="leftproicons">
+                        <img src="mediaicon.jpg" class="media">
+                        <img src="iconizer-gificon.svg" class="gif">
+                        <img src="iconizer-poll.svg" class="poll">
+                        <img src="iconizer-emoji.jpeg" class="emoji">
+                        <img src="iconizer-schedule.svg" class="schedule">
+                        <img src="iconizer-gps.svg" class="gps">
+                    </div>
+                    <div class="tweet">
+                        <button class="tweet-button">Tweet</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </header>
+        <header class="tweetcount">
+            <p class="tweetstat">
+                Show 1,323 Tweets
+            </p>
+        </header>
+        <main class="container">
+            <div class="feed">
+                <div class="google">
+                    <div class="details">
+                        <div class="description">
+                            <div class="logo">
+                                <img src="googlelogo.jpg" class="google-logo">
+                            </div>
+                            <div class="desc">
+                                <p>
+                                <span class="title">Google</span> <img class="verified" src="goldtick.jpg"> <span class="id">@Google &#xB7; June 8</span> <br>
+                                Create, explore and survive on your own or with friends on <span class="mine">@Minecraft</span>:<br>
+                                Bedrock Edition, which is now on <span class="mine">#Chromebook</span> &#8594 <a href="https://blog.google/products/chromebooks/minecraft/?utm_source=tw&utm_medium=social&utm_campaign=og&utm_content=&utm_term="
+                                target="_blank">goo.gle/3oRBOW2
+                                </a>
+                                </p>
+                                <img src="giphy.gif" class="google-content">
+                                <div class="icons">
+                                    <div class="icons-div">
+                                        <img src="reply.jpg" class="reply">
+                                        <p class="reply-stat">110</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="retweet.jpg.jpg" class="retweet"> 
+                                        <p class="reply-stat">263</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="like.jpg.jpg" class="like">
+                                        <p class="reply-stat">3,042</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="bargraph-removebg-preview.jpg" class="views">
+                                        <p class="reply-stat">534k</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="share.jpg.jpg" class="share">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="propic">
+                            <img src="andrew.jpg" class="andrew">
+                        </div>
+                        <div class="info">
+                            <p class="comment-desc">
+                                <span class="title">Andrew Tate</span> <img src="bluetick.jpg" class="bluetick"> <span class="id">@Cobratate &#xB7; 12h</span> <br>
+Wifey will say "Mashallah ❤️💪" everytime she sees your muscles.
+                            </p>
+                        </div>
+                    </div>
+                            <div class="icons">
+                                <div class="icons-div">
+                                    <img src="reply.jpg" class="reply">
+                                    <p class="reply-stat">663</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="retweet.jpg.jpg" class="retweet"> 
+                                    <p class="reply-stat">1,448</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="like.jpg.jpg" class="like">
+                                    <p class="reply-stat">19k</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="bargraph-removebg-preview.jpg" class="views">
+                                    <p class="reply-stat">953.6k</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="share.jpg.jpg" class="share">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="feed">
+                <div class="google">
+                    <div class="details">
+                        <div class="description">
+                            <div class="logo">
+                                <img src="spotifylogo.jpg" class="google-logo">
+                            </div>
+                            <div class="desc">
+                                <p>
+                                <span class="title">Spotify</span> <img class="verified" src="goldtick.jpg"> <span class="id">@Spotify &#xB7; June 9</span> <br>
+                                Welcome to The Age of Pleasure ❤️ <span class="mine">@JanelleMonae</span>'s new album is out <br>now.<br>
+                                <a href="https://open.spotify.com/album/3440hCSfwYXxJcbQ0j3jAJ?_branch_match_id=1113563073325718912&utm_medium=marketing&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1g%2FJSHVMT81PC8hJTSwuLUoFAHeMHfIlAAAA"
+                                target="_blank">goo.gle/3oRBOW2
+                                </a>
+                                </p>
+                                <img src="spotify.jpg" class="google-content">
+                                <div class="icons">
+                                    <div class="icons-div">
+                                        <img src="reply.jpg" class="reply">
+                                        <p class="reply-stat">103</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="retweet.jpg.jpg" class="retweet"> 
+                                        <p class="reply-stat">874</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="like.jpg.jpg" class="like">
+                                        <p class="reply-stat">6,099</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="bargraph-removebg-preview.jpg" class="views">
+                                        <p class="reply-stat">642.5k</p>
+                                    </div>
+                                    <div class="icons-div">
+                                        <img src="share.jpg.jpg" class="share">
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="propic">
+                            <img src="katty.jpg" class="andrew">
+                        </div>
+                        <div class="info">
+                            <p class="comment-desc">
+                                <span class="title">Katy Perry</span> <img src="bluetick.jpg" class="bluetick"> <span class="id">@katyperry &#xB7; 6h</span> <br>
+                                Can't wait❤️
+                            </p>
+                        </div>
+                    </div>
+                            <div class="icons">
+                                <div class="icons-div">
+                                    <img src="reply.jpg" class="reply">
+                                    <p class="reply-stat">663</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="retweet.jpg.jpg" class="retweet"> 
+                                    <p class="reply-stat">1,448</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="like.jpg.jpg" class="like">
+                                    <p class="reply-stat">19k</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="bargraph-removebg-preview.jpg" class="views">
+                                    <p class="reply-stat">953.6k</p>
+                                </div>
+                                <div class="icons-div">
+                                    <img src="share.jpg.jpg" class="share">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed">
+                        <div class="google">
+                            <div class="details">
+                                <div class="description">
+                                    <div class="logo">
+                                        <img src="biden.jpg" class="google-logo">
+                                    </div>
+                                    <div class="desc">
+                                        <p>
+                                        <span class="title">President Biden</span> <img class="verified-gray" src="graytick.jpg"> <span class="id">@POTUS
+                                            &#xB7; 20h</span> <br>
+                                            Today, the People's House - your house - sends a clear message to the<br>country and to the world.<br><br>America is a nation of pride.
+                                        </p>
+                                        <img src="pride.jpg" class="google-content">
+                                        <div class="icons">
+                                            <div class="icons-div">
+                                                <img src="reply.jpg" class="reply">
+                                                <p class="reply-stat">42.2k</p>
+                                            </div>
+                                            <div class="icons-div">
+                                                <img src="retweet.jpg.jpg" class="retweet"> 
+                                                <p class="reply-stat">26.2k</p>
+                                            </div>
+                                            <div class="icons-div">
+                                                <img src="like.jpg.jpg" class="like">
+                                                <p class="reply-stat">163k</p>
+                                            </div>
+                                            <div class="icons-div">
+                                                <img src="bargraph-removebg-preview.jpg" class="views">
+                                                <p class="reply-stat">25.6M</p>
+                                            </div>
+                                            <div class="icons-div">
+                                                <img src="share.jpg.jpg" class="share">
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="propic">
+                                    <img src="rafael.jpg" class="andrew">
+                                </div>
+                                <div class="info">
+                                    <p class="comment-desc">
+                                        <span class="title">Rafa Nadal</span> <img src="bluetick.jpg" class="bluetick"> <span class="id">@RafaelNadal
+                                            &#xB7; 4h</span> <br>
+                                            Many congrats on this amazing achievement <span class="tag">@DjokerNole</span><br> 
+                                            23 is a number that just a few years back was imposible to think about,<br> and you made it!<br> 
+                                            Enjoy it with your family and team! 👏🏻
+                                    </p>
+                                </div>
+                            </div>
+                                    <div class="icons">
+                                        <div class="icons-div">
+                                            <img src="reply.jpg" class="reply">
+                                            <p class="reply-stat">1692</p>
+                                        </div>
+                                        <div class="icons-div">
+                                            <img src="retweet.jpg.jpg" class="retweet"> 
+                                            <p class="reply-stat">1002</p>
+                                        </div>
+                                        <div class="icons-div">
+                                            <img src="like.jpg.jpg" class="like">
+                                            <p class="reply-stat">12k</p>
+                                        </div>
+                                        <div class="icons-div">
+                                            <img src="bargraph-removebg-preview.jpg" class="views">
+                                            <p class="reply-stat">456k</p>
+                                        </div>
+                                        <div class="icons-div">
+                                            <img src="share.jpg.jpg" class="share">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <header class="right-sidebar">
+                                <div class="fixed">
+                                    <div class="twitter-search">
+                                        <input type="text" placeholder="Search Twitter" class="searchtweet">
+                                    </div>
+                                </div>
+                                <div class="getverified">
+                                    <p class="text-getverified">
+                                        Get Verified
+                                    </p>
+                                    <p class="text2-getverified">
+                                        Subscribe to unlock new features
+                                    </p>
+                                    <button class="button-getverified">
+                                        Get verified
+                                    </button>
+                                </div>
+                                <div class="hashtags">
+                                    <p class="hashheading">
+                                        Trends For You
+                                    </p>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Politics &#183; Trending
+                                        </p>
+                                        <p class="hash2">
+                                            #FranceHasFallen
+                                        </p>
+                                        <p class="hash3">
+                                            102k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Politics &#183; Trending
+                                        </p>
+                                        <p class="hash2">
+                                            #FranceRiots
+                                        </p>
+                                        <p class="hash3">
+                                            775k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Trending in Germay
+                                        </p>
+                                        <p class="hash2">
+                                           #Osnabruck
+                                        </p>
+                                        <p class="hash3">
+                                            102k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Politics &#183; Trending
+                                        </p>
+                                        <p class="hash2">
+                                            #IndianEconomy
+                                        </p>
+                                        <p class="hash3">
+                                            822k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Trending in sports
+                                        </p>
+                                        <p class="hash2">
+                                            #MSDhoni
+                                        </p>
+                                        <p class="hash3">
+                                            342k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Politics &#183; Trending
+                                        </p>
+                                        <p class="hash2">
+                                            #Australia
+                                        </p>
+                                        <p class="hash3">
+                                            102k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="france">
+                                        <p class="hash1">
+                                            Trending in Movies
+                                        </p>
+                                        <p class="hash2">
+                                            #TheShapeOfWater
+                                        </p>
+                                        <p class="hash3">
+                                            553k Tweets
+                                        </p>
+                                    </div>
+                                    <div class="show">
+                                        <p class="showmore">
+                                            Show more
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--<div class="tofollow">
+                                    <p class="who">
+                                        Who to follow
+                                    </p>
+                                    <div class="elon">
+
+                                    </div>
+                                </div>-->
+                            </header>
+        </main>
+    </body>
+</html>

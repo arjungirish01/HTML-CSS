@@ -1,0 +1,39 @@
+body{
+  background-color:black;
+  color:white;
+  font-family:Arial;
+}
+.title{
+  font-size:15px;
+  font-weight:bold;
+}
+.img-button{
+  object-fit:cover;
+  object-position:fit;
+  width:100px;
+  height:100px;
+  border-radius:100px;
+}
+.game-button{
+  width:150px;
+  height:150px;
+  border-radius:80px;
+  border:none;
+  margin:20px;
+  background-color:transparent;
+  color:white;
+  border:solid;
+}
+.status{
+  font-family:Arial;
+  font-weight:bold;
+  margin:30px;
+}
+.moves,.scoreUpdate{
+  margin:30px;
+}
+.reset-button{
+  font-family:Arial;
+  font-size:15px;
+  padding:20px;
+}

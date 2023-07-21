@@ -1,0 +1,38 @@
+body{
+  background-color:black;
+  font-family:arial;
+  font-size:15px;
+  color:white;
+}
+button{
+  width:80px;
+  height:80px;
+  border-radius:80px;
+  border:solid;
+  border-width:2px;
+  background-color:transparent;
+  margin:20px;
+  border-color:white;
+  color:white;
+  font-weight:bold;
+}
+.container{
+  display:absolute;
+}
+.title{
+  color:white;
+}
+.image{
+  width:60px;
+  object-fit:contain;
+  object-position:center;
+  border-radius:30px;
+}
+.reset{
+  background-color:red;
+}
+.autoPlay-button{
+    background-color:green;
+    color:black;
+    font-weight:bold;
+}

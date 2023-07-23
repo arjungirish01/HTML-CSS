@@ -1,86 +1,140 @@
-let score=JSON.parse(localStorage.getItem('score'));
-      if(!score){
-        score={
-          win:0,
-          lost:0,
-          tie:0
-        };
-      }
-      updateElement();
-      function computerMove(){
-        let randNum=Math.random();
-        if(randNum>0 && randNum<1/3)
-            return 'rock';
-        else if(randNum >1/3 && randNum <2/3)
-            return 'paper';
-        else
-          return 'scissors';
-      }
 
-      function game(comMove,playerMove){
-        let res;
-        if(playerMove===`rock`){
-          if(comMove===`rock`){
-            score.tie++;
-            res='Tied';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-          else if(comMove===`scissors`){
-            score.win++;
-            res='Won';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-          else{
-            score.lost++;
-            res='Lost';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-        }
+  const rockElement=document.querySelector('.rock');
+  const paperElement=document.querySelector('.paper');
+  const scissorsElement=document.querySelector('.scissors');
+  const autoPlayElement=document.querySelector('.auto-Play');
+  const resetElement=document.querySelector('.reset');
+  rockElement.addEventListener('click',()=>{
+    gamePlay('rock');
+  });
+  paperElement.addEventListener('click',()=>{
+    gamePlay('paper');
+  });
+  scissorsElement.addEventListener('click',()=>{
+    gamePlay('scissors');
+  });
+  autoPlayElement.addEventListener('click',()=>{
+    autoPlaying();
+    buttonPlay();
+  });
+  resetElement.addEventListener('click',()=>{
+        localStorage.removeItem('score');
+        score.Win=0;
+        score.Lost=0;
+        score.Tie=0;
+        alert('You are resetting score');
+        updateScore();
+  })
+  let scoreElement=document.querySelector('.score');
+  let score=JSON.parse(localStorage.getItem('score'))||{
+    Win:0,
+    Lost:0,
+    Tie:0
+  };
+  scoreElement.innerHTML=`Win: ${score.Win} Lost: ${score.Lost} Tie: ${score.Tie}`;
 
-        else if(playerMove===`scissors`){
-          if(comMove===`rock`){
-            score.lost++;
-            res='Lost';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-          else if(comMove===`scissors`){
-            score.tie++;
-            res='Tied';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-          else{
-            score.win++;
-            res='Won';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-        }
 
-        else{
-          if(comMove===`rock`){
-            score.win++;
-            res='Won';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-          else if(comMove===`scissors`){
-            score.lost++;
-            res='Lost';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-          else{
-            score.tie++;
-            res='Tied';
-            //console.log(alert(`Computer:${comMove} Tie Game\n Win:${score.win} Lost:${score.lost} Tie:${score.tie}`));
-          }
-        }
-        localStorage.setItem('score',JSON.stringify(score)); //localStorage can only store string
-        updateElement();
-        document.querySelector('.moves').innerHTML=`You
-      <img src="${playerMove}-emoji.png" class="img-button">
-      Computer
-      <img src="${comMove}-emoji.png" class="img-button">`;
-        document.querySelector('.status').innerHTML=`You ${res}`;
+  let isAuto=false;
+  let autoId;
+  const autoPlaying=()=>{
+  if(!isAuto){
+    
+    autoId=setInterval(()=>{
+      let player=computerMove();
+      gamePlay(player);
+    },1000);
+    isAuto=true;
+  }
+  else{
+    clearInterval(autoId);
+    isAuto=false;
+  }
+}
+
+  const computerMove=()=>{
+  let ran=Math.random();
+  let move;
+  if(ran>0&&ran<1/3){
+    move='paper';
+  }
+  else if(ran>1/3&&ran<2/3){
+    move='rock';
+  }
+  else{
+    move='scissors';
+  }
+  return move;
+}
+
+
+  const gamePlay=player=>{
+    let com=computerMove();
+    let res='';
+    if(player==='rock'){
+      if(com==='rock'){
+        score.Tie++;
+        res='Tie';
       }
-      
-      function updateElement(){
-        document.querySelector('.scoreUpdate').innerHTML=`Win:${score.win} Lost:${score.lost} Tie:${score.tie}`;
+      else if(com==='paper'){
+        score.Lost++;
+        res='Lost';
       }
+      else{
+        score.Win++;
+        res='Won';
+      }
+    }
+    else if(player==='paper'){
+      if(com==='rock'){
+        score.Win++;
+        res='Won';
+      }
+      else if(com==='paper'){
+        score.Tie++;
+        res='Tie';
+      }
+      else{
+        score.Lost++;
+        res='Lost';
+      }
+    }
+    else{
+      if(com==='rock'){
+        score.Lost++;
+        res='Lost';
+      }
+      else if(com==='paper'){
+        score.Win++;
+        res='Won';
+      }
+      else{
+        score.Tie++;
+        res='Tie';
+      }
+    }
+    let html='';
+    let moveElement=document.querySelector('.moves');
+    html=`You: <img src="${player}-emoji.png" class="image">
+          Computer: <img src="${com}-emoji.png" class="image">`;
+    moveElement.innerHTML=html;
+    localStorage.setItem('score',JSON.stringify(score));
+    let resElement=document.querySelector('.result');
+    resElement.innerHTML=res;
+    updateScore();
+  }
+
+  const updateScore=()=>{
+    scoreElement.innerHTML=`Win: ${score.Win} Lost: ${score.Lost} Tie: ${score.Tie}`;
+  }
+
+  const buttonPlay=()=>{
+    let buttonplayElement=document.querySelector('.auto-Play');
+    if(buttonplayElement.innerText==='Auto Play'){
+        buttonplayElement.innerText='Stop';
+        buttonplayElement.classList.add('autoPlay-button');
+    }
+    else{
+      buttonplayElement.innerText='Auto Play';
+      buttonplayElement.classList.remove('autoPlay-button');
+    }
+  }

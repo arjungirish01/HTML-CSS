@@ -1,4 +1,43 @@
 
+  const rockElement=document.querySelector('.rock');
+  const paperElement=document.querySelector('.paper');
+  const scissorsElement=document.querySelector('.scissors');
+  const autoPlayElement=document.querySelector('.auto-Play');
+  const resetElement=document.querySelector('.reset');
+  rockElement.addEventListener('click',()=>{
+    gamePlay('rock');
+  });
+  paperElement.addEventListener('click',()=>{
+    gamePlay('paper');
+  });
+  scissorsElement.addEventListener('click',()=>{
+    gamePlay('scissors');
+  });
+  autoPlayElement.addEventListener('click',()=>{
+    autoPlaying();
+    buttonPlay();
+  });
+  resetElement.addEventListener('click',()=>{
+        localStorage.removeItem('score');
+        score.Win=0;
+        score.Lost=0;
+        score.Tie=0;
+        alert('You are resetting score');
+        updateScore();
+  });
+
+      document.body.addEventListener('keydown',(event)=>{
+        console.log(event.key);
+     if(event.key==='r'){
+        gamePlay('rock');
+      }
+      else if(event.key==='p'){
+        gamePlay('paper');
+      }
+      else if(event.key==='s'){
+        gamePlay('scissors');
+      }
+  });
   let scoreElement=document.querySelector('.score');
   let score=JSON.parse(localStorage.getItem('score'))||{
     Win:0,
@@ -10,10 +49,10 @@
 
   let isAuto=false;
   let autoId;
-  function autoPlaying(){
+  const autoPlaying=()=>{
   if(!isAuto){
     
-    autoId=setInterval(function(){
+    autoId=setInterval(()=>{
       let player=computerMove();
       gamePlay(player);
     },1000);
@@ -25,7 +64,7 @@
   }
 }
 
-  function computerMove(){
+  const computerMove=()=>{
   let ran=Math.random();
   let move;
   if(ran>0&&ran<1/3){
@@ -97,11 +136,11 @@
     updateScore();
   }
 
-  function updateScore(){
+  const updateScore=()=>{
     scoreElement.innerHTML=`Win: ${score.Win} Lost: ${score.Lost} Tie: ${score.Tie}`;
   }
 
-  function buttonPlay(){
+  const buttonPlay=()=>{
     let buttonplayElement=document.querySelector('.auto-Play');
     if(buttonplayElement.innerText==='Auto Play'){
         buttonplayElement.innerText='Stop';

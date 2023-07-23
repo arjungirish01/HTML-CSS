@@ -15,7 +15,7 @@
       Rock
     </button>
 
-    <button onclick="
+    <button onclick=" <!--Better to use eventListener instead of html attribute.
       comMove=computerMove();
       game(comMove,`Paper`);
     ">

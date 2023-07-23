@@ -9,25 +9,17 @@
         Rock Paper Scissors
       </p>
 
-      <button class="rock" onclick="
-
-        gamePlay('rock');
-      ">
+      <button class="rock">
         <img src="rock-emoji.png" class="image">
         
       </button>
 
-      <button class="paper" onclick="
-        
-        gamePlay('paper');
-      ">
+      <button class="paper">
         <img src="paper-emoji.png" class="image">
         
       </button>
 
-      <button class="scissors" onclick="
-        gamePlay('scissors');
-      ">
+      <button class="scissors">
         <img src="scissors-emoji.png" class="image">
       
       </button>
@@ -42,21 +34,11 @@
       <p class="score">
 
       </p>
-      <button class="reset" onclick="
-        localStorage.removeItem('score');
-        score.Win=0;
-        score.Lost=0;
-        score.Tie=0;
-        alert('You are resetting score');
-        updateScore();
-      ">
+      <button class="reset">
         Reset
       </button>
 
-      <button class="auto-Play" onclick="
-          buttonPlay();
-          autoPlaying();
-      ">
+      <button class="auto-Play">
         Auto Play
       </button>
   </div>

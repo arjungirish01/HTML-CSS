@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .add-css{
+        background-color:green;
+        font-family:arial;
+        font-weight:bold;
+      }
+      .sec-css{
+        background-color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="add">
+      Add
+    </button>
+    <input class="in">
+    <section>
+      <p>
+        hello
+      </p>
+    </section>
+  </body>
+
+  <script>
+
+    const addElement=document.querySelector('.add');
+    addElement.addEventListener('click',()=>{
+      addElement.classList.add('add-css');
+    });
+    const inputElement=document.querySelector('.add');
+    inputElement.addEventListener('onKeyDown',()=>{
+      addElement.classList.add('sec-css');
+    });
+  </script>
+</html>

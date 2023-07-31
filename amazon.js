@@ -50,8 +50,8 @@ products.forEach((product)=>{
         $${(product.priceCents/100).toFixed(2)}
       </div>
 
-      <div class="product-quantity-container">
-        <select>
+      <div class="select-to-cart">
+        <select class="select${product.id}">
           <option selected value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -70,22 +70,26 @@ products.forEach((product)=>{
       <div class="added-to-cart">
       </div>
 
-      <button class="add-to-cart-button button-primary" data-product-name="${product.name}">
+      <button class="add-to-cart-button button-primary" data-product-id="${product.id}" data-product-name="${product.name}">
         Add to Cart
       </button>
 </div>`
 });
 
 document.querySelector('.js-products-grid').innerHTML=productHtml;
+let cartQ=0;
+let cartElement=document.querySelector('.cart-quantity');
+cartElement.innerHTML=cartQ;
 
 document.querySelectorAll('.button-primary').forEach((buttonElement)=>{
   buttonElement.addEventListener('click',()=>{
-    let productName=buttonElement.dataset.productName; //here the product-name will be converted to camelcase in js
-    let quantity=1;
+    let productId=buttonElement.dataset.productId; //here the product-name will be converted to camelcase in js
     let found=false;
     let index;
+    let selectElement=document.querySelector(`.select${productId}`);
+    quantity=parseInt(selectElement.value);
     cart.forEach((item,ind)=>{
-      if(item.productName===productName){
+      if(item.id===productId){
         found=true;
         index=ind;
         return;
@@ -93,13 +97,18 @@ document.querySelectorAll('.button-primary').forEach((buttonElement)=>{
     })
     if(!found){
       cart.push({
-        productName:productName,
-        quantity:1
+        id:productId,
+        quantity:quantity
       });
     }
     else{
-      cart[index].quantity++;
+      cart[index].quantity+=quantity;
     }
-      console.log(cart);
+    cartQ=0;
+    cart.forEach((item)=>{
+      cartQ+=item.quantity;
+    });
+    cartElement.innerHTML=cartQ;
   });
 });
+
